@@ -1,0 +1,9 @@
+<p>
+    <a (click)="cartClick();">My Cart <span class="badge">{{getCartCount()}}</span></a>
+</p>
+
+<div *ngIf="isActive">
+  <div *ngFor="let pizza of pizzasInCart;">{{pizza.Name}} - {{pizza.Price}} $</div>
+
+  <div><span [innerHtml]="getTotal()"></span> <a routerLink="/payment" routerLinkActive="active">Pay now</a></div>
+</div>

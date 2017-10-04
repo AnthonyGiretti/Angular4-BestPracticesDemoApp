@@ -1,0 +1,20 @@
+<p>
+  Choose your Pizza !
+</p>
+
+<div class="container">
+  <div class="row">
+
+      <div class="col-sm-6 col-md-4" *ngFor="let pizza of pizzas;">
+        <div class="thumbnail">
+          <img src="{{ pizza.PictureUrl }}">
+          <div class="caption">
+            <h3>{{ pizza.Name }}</h3>
+            <p><strong>{{ pizza.Price }} $</strong></p>
+            <p><a class="btn btn-primary" role="button" (click)="onClick(pizza)">Add to cart</a></p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
